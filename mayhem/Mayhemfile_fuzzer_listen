@@ -1,0 +1,9 @@
+project: savantenvs/usrsctp
+target: fuzzer_listen
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzzer_listen/testsuite
+cmds:
+  - cmd: /mayhem/fuzzer_listen
+    libfuzzer: true
+    timeout: 5

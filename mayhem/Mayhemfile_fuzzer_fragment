@@ -1,0 +1,9 @@
+project: savantenvs/usrsctp
+target: fuzzer_fragment
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzzer_fragment/testsuite
+cmds:
+  - cmd: /mayhem/fuzzer_fragment
+    libfuzzer: true
+    timeout: 5
